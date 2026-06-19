@@ -79,6 +79,15 @@ RoBERTa-base steadily improved every epoch — F1 grew from `0.266 → 0.484` (m
 > **RoBERTa-base selected → converted to ONNX for fast, portable inference.** See `onnx_conversion/`.
 
 ---
+## 🌐 Live Demo
+
+The trained RoBERTa-base model is deployed as an interactive web app on Hugging Face Spaces using Gradio. Paste any startup description and the model returns predicted industry genres with confidence scores in real time.
+
+🔗 **[Try it live → deb34/startup-types-classifier](https://huggingface.co/spaces/deb34/startup-types-classifier)**
+
+![Demo](assets/demo.png)
+
+> *Example: A customer support SaaS startup description correctly predicted as **SaaS (94%)**, **Customer Support Tools (82%)**, and **Startups (59%)**.*
 
 ## 📄 License
 
