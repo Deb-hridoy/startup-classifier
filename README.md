@@ -89,9 +89,47 @@ The trained RoBERTa-base model is deployed as an interactive web app on Hugging 
 
 > *Example: A customer support SaaS startup description correctly predicted as **SaaS (94%)**, **Customer Support Tools (82%)**, and **Startups (59%)**.*
 
+---
+## 🗂️ Repository Structure
+```
+startup-classifier/
+│
+├── Dataset/
+│   └── Startups_Dataset_Merge.csv
+│
+├── Dataset_preprocessing/
+│   └── Dataset_Preprocessing_NLP.ipynb
+│
+├── assets/
+│   └── demo.png
+│
+├── betalist_scraper/
+│   ├── scraping/
+│   │   ├── links.py          # Scrape URLs by category + pagination
+│   │   ├── pages.py          # Multi-category URL collector
+│   │   ├── extract.py        # Scrape NLP fields (name/motto/desc/genres)
+│   │   └── url.py            # Chunked batch scraper (resume-safe)
+│   └── processing/
+│       └── merge.py          # Merge partial CSV outputs
+│
+├── links_scraped/
+│   └── Links_used_for_scraped.txt
+│
+├── onnx_conversion/
+│
+├── trained_transformers/
+│   ├── Distilbert_fastai_NLP.ipynb
+│   ├── MiniLM_L12_fastai_NLP.ipynb
+│   └── Roberta_base_fastai_NLP.ipynb
+│
+├── LICENSE
+└── README.md
+```
+
+---
 ## 📄 License
 
-MIT — see [LICENSE](LICENSE)
+Apache 2.0 — see [LICENSE](LICENSE)
 
 ---
 
