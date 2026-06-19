@@ -1,10 +1,10 @@
 ## 📌 Overview
 
-This project presents one of the first known attempts to build a multi-label startup industry classifier using real-world scraped data at scale. While text classification datasets are common, no publicly available dataset or model exists that specifically targets startup product categorisation across diverse industry genres — making this work novel in both dataset construction and task framing.
+This project presents one of the first known attempts to build a multi-label startup industry classifier using real-world **scraped data at scale**. While text classification datasets are common, no publicly available dataset or model exists that specifically targets startup product categorisation across diverse industry genres — making **this work novel** in both dataset construction and task framing.
 
-The pipeline was built entirely from scratch. Over 21,000 startup entries were collected by scraping [BetaList](https://betalist.com) — a live platform listing newly launched tech products — across dozens of categories including AI, SaaS, FinTech, developer tools, and more. Each entry captures the startup's name, tagline, full product description, genre labels, and source URL. The data collection alone required building a multi-stage Selenium scraper capable of handling pagination, dynamic content, crash recovery, and chunked batch processing across thousands of individual product pages.
+The pipeline was built entirely **from scratch**. Over **21,000 startup** entries were collected by scraping [BetaList](https://betalist.com) — a live platform listing newly launched tech products — across dozens of categories including AI, SaaS, FinTech, developer tools, and more. Each entry captures the startup's name, tagline, full product description, genre labels, and source URL. The data collection alone required building a multi-stage Selenium scraper capable of handling pagination, dynamic content, crash recovery, and chunked batch processing across thousands of individual product pages.
 
-The resulting dataset of 21,408 startups with zero null values was then used to fine-tune transformer-based language models for multi-label classification — predicting which industry categories a startup belongs to purely from its text. This kind of large-scale, domain-specific, multi-label NLP dataset for the startup ecosystem does not exist elsewhere in the open literature, making it a meaningful contribution beyond the modelling work itself.
+The resulting dataset of 21,408 startups was then used to fine-tune transformer-based language models for multi-label classification — predicting which industry categories a startup belongs to purely from its text. This kind of large-scale, domain-specific, multi-label NLP dataset for the startup ecosystem does not exist elsewhere in the open literature, making it a meaningful contribution beyond the modelling work itself.
 
 ## 📊 Dataset Sample
 
@@ -13,7 +13,6 @@ The resulting dataset of 21,408 startups with zero null values was then used to 
 | OutboundGateway | Route traffic securely... | Provides HTTPS... | Internet Service Providers, Security | betalist.com/... |
 | Flux Plugins | Speed up WordPress... | AI-powered image, SEO... | Blogging, Optimization | betalist.com/... |
 
-**Shape:** `(21408, 5)` · **Nulls:** `0`
 
 ---
 
@@ -83,7 +82,7 @@ RoBERTa-base steadily improved every epoch — F1 grew from `0.266 → 0.484` (m
 
 The trained RoBERTa-base model is deployed as an interactive web app on Hugging Face Spaces using Gradio. Paste any startup description and the model returns predicted industry genres with confidence scores in real time.
 
-🔗 **[Try it live → deb34/startup-types-classifier](https://huggingface.co/spaces/deb34/startup-types-classifier)**
+🔗 **[Try it live → startup-types-classifier](https://huggingface.co/spaces/deb34/startup-types-classifier)**
 
 ![Demo](assets/demo.png)
 
