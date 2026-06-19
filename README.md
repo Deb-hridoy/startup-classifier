@@ -13,6 +13,7 @@ The resulting dataset of 21,408 startups was then used to fine-tune transformer-
 | OutboundGateway | Route traffic securely... | Provides HTTPS... | Internet Service Providers, Security | betalist.com/... |
 | Flux Plugins | Speed up WordPress... | AI-powered image, SEO... | Blogging, Optimization | betalist.com/... |
 
+**Output:** `Startups_Dataset_Merge.csv` — 21,408 rows, 5 columns. The final merged dataset is available in the `Dataset/` folder of this repository.
 
 ---
 
