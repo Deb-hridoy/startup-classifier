@@ -81,7 +81,7 @@ RoBERTa-base steadily improved every epoch — F1 grew from `0.266 → 0.484` (m
 ---
 ## 🌐 Live Demo
 
-The trained RoBERTa-base model is deployed as an interactive web app on Hugging Face Spaces using Gradio. Paste any startup description and the model returns predicted industry genres with confidence scores in real time.
+The trained RoBERTa-base model is deployed as an interactive web app on Hugging Face Spaces using Gradio. Paste any startup description and the model returns predicted industry topics with confidence scores in real time.
 
 🔗 **[Try it live → startup-types-classifier](https://huggingface.co/spaces/deb34/startup-types-classifier)**
 
